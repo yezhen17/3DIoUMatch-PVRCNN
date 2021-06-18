@@ -1,0 +1,16 @@
+**__pycache__**
+**build**
+**egg-info**
+*.pyc
+venv/
+*.idea/
+*.so
+*.pth
+*.zip
+*.pkl
+*.bin
+data/kitti/training/
+data/kitti/testing/
+work_dirs/
+output/
+demo/
