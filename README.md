@@ -74,7 +74,8 @@ GPUS_PER_NODE=8 sh scripts/slurm_pretrain.sh p1 pretrain_0.01_1 8 \
 GPUS_PER_NODE=<num_gpus> sh scripts/slurm_train.sh <partition> \
 <job_name> <num_gpus> --cfg_file ./cfgs/kitti_models/pv_rcnn_ssl_60.yaml \
 --split <split_name_without_txt> --extra_tag <log_folder_name> \
---ckpt_save_interval <ckpt_save_interval> --pretrain_model <path_to_pretrain_model> \ --repeat <number_of_traverses_of_dataset_in_one_epoch> --thresh <iou_thresh> \
+--ckpt_save_interval <ckpt_save_interval> --pretrain_model <path_to_pretrain_model> \
+--repeat <number_of_traverses_of_dataset_in_one_epoch> --thresh <iou_thresh> \
 --sem_thresh <sem_cls_thresh> --dbinfos <pkl_name_of_dbinfos>
 ```
 
