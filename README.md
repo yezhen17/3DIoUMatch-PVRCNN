@@ -58,7 +58,7 @@ For example:
 
 ```bash
 python -m pcdet.datasets.kitti.kitti_dataset create_part_dbinfos \
-tools/cfgs/dataset_configs/kitti_dataset.yaml split_0.01_1
+tools/cfgs/dataset_configs/kitti_dataset.yaml train_0.01_1
 ```
 
 #### Pre-training
@@ -76,7 +76,7 @@ For example:
 
 ```bash
 GPUS_PER_NODE=8 sh scripts/slurm_pretrain.sh p1 pretrain_0.01_1 8 \
---cfg_file ./cfgs/kitti_models/pv_rcnn.yaml --split split_0.01_1 \
+--cfg_file ./cfgs/kitti_models/pv_rcnn.yaml --split train_0.01_1 \
 --extra_tag split_0.01_1 --ckpt_save_interval 4 --repeat 10 \
 --dbinfos kitti_dbinfos_train_0.01_1_37.pkl
 ```
@@ -96,7 +96,7 @@ For example:
 
 ```bash
 GPUS_PER_NODE=8 sh scripts/slurm_train.sh p1 train_0.01_1 8 \
---cfg_file ./cfgs/kitti_models/pv_rcnn_ssl_60.yaml --split split_0.01_1 \
+--cfg_file ./cfgs/kitti_models/pv_rcnn_ssl_60.yaml --split train_0.01_1 \
 --extra_tag split_0.01_1 --ckpt_save_interval 2 \
 --pretrained_model "../output/cfgs/kitti_models/pv_rcnn/split_0.01_1/ckpt/checkpoint_epoch_80.pth" \
 --repeat 5 --thresh '0.5,0.25,0.25' --sem_thresh '0.4,0.0,0.0' \
