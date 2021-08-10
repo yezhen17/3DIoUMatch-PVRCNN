@@ -28,12 +28,23 @@ Please first generate the data splits or use the data splits we provide.
 ```bash
 cd data/kitti/ImageSets
 python split.py <label_ratio> <split_num>
+cd ../../..
 ```
 
 For example:
 
 ```bash
+cd data/kitti/ImageSets
 python split.py 0.01 4
+cd ../../..
+```
+
+Then generate the `infos` and `dbinfos`, and rename `kitti_dbinfos_train_3712.pkl`.
+
+```
+python -m pcdet.datasets.kitti.kitti_dataset create_kitti_infos \
+tools/cfgs/dataset_configs/kitti_dataset.yaml
+mv data/kitti/kitti_dbinfos_train_3712.pkl data/kitti/kitti_dbinfos_train.pkl
 ```
 
 Then generate the new `gt_database` based on the data split.
