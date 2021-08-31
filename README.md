@@ -4,7 +4,7 @@
 
 In this repository, we provide 3DIoUMatch implementation (with Pytorch) based on PV-RCNN. This is not a general implementation of SSL-training on KITTI but tailored to PVRCNN.
 
-The implementation based on VoteNet is [here](https://github.com/THU17cyz/3DIoUMatch). Our arXiv report is [here](https://arxiv.org/abs/2012.04355v2).
+The implementation based on VoteNet is [here](https://github.com/THU17cyz/3DIoUMatch). Our arXiv report is [here](https://arxiv.org/abs/2012.04355v3).
 
 ## Notice
 
