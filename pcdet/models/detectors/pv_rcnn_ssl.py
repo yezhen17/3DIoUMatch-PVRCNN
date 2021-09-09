@@ -114,9 +114,9 @@ class PVRCNN_SSL(Detector3DTemplate):
                     new_boxes = torch.zeros((ori_boxes.shape[0], max_pseudo_box_num, ori_boxes.shape[2]),
                                             device=ori_boxes.device)
                     for i, inds in enumerate(labeled_mask):
-                        diff = max_pseudo_box_num - ori_boxes[i].shape[0]
-                        new_box = torch.cat([ori_boxes[i], torch.zeros((diff, 8), device=ori_boxes[i].device)], dim=0)
-                        new_boxes[i] = new_box
+                        diff = max_pseudo_box_num - ori_boxes[inds].shape[0]
+                        new_box = torch.cat([ori_boxes[inds], torch.zeros((diff, 8), device=ori_boxes[inds].device)], dim=0)
+                        new_boxes[inds] = new_box
                     for i, pseudo_box in enumerate(pseudo_boxes):
 
                         diff = max_pseudo_box_num - pseudo_box.shape[0]
