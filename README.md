@@ -12,7 +12,7 @@ In the current version of our paper, the experiments are using a problematic set
 
 ![image](https://user-images.githubusercontent.com/52420115/122535862-8873fe00-d056-11eb-9ad3-bd41d76f6af9.png) 
 
-The above results are achieved with IoU thresholds 0.5, 0.25, 0.25 for car, pedestrian, and cyclist, respectively. The classification threshold is 0.4. We repeat the traverse of labeled data for 5 times in each epoch and we train 60 epochs.
+The above results are achieved with IoU thresholds 0.7, 0.5, 0.5 for car, pedestrian, and cyclist, respectively. The classification threshold is 0.4. We repeat the traverse of labeled data for 5 times in each epoch and we train 60 epochs.
 
 
 ## Installation
